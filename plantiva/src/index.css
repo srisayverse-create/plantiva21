@@ -1,0 +1,301 @@
+@import "tailwindcss";
+
+/* Alldae Organic & Modern Aesthetic Styling for Plantiva */
+
+:root {
+  --color-primary: #122B1E;
+  --color-primary-light: #1E4E2C;
+  --color-primary-mid: #387B44;
+  --color-accent-lime: #D6F045;
+  --color-accent-yellow: #F4D068;
+  --color-accent: #C9A84C;
+  --color-accent-light: #EDCF87;
+  --color-accent-pale: #E7F3EC;
+  
+  /* Background & Pastels inspired by alldae design reference */
+  --color-bg: #FAF8F5;
+  --color-bg-alt: #F4F2EC;
+  --color-white: #FFFFFF;
+  --color-text: #1C2A21;
+  --color-text-mid: #4A5D4E;
+  --color-text-light: #7D9081;
+
+  /* Card Pastels */
+  --pastel-pink: #FCEEE8;
+  --pastel-yellow: #FBF5D5;
+  --pastel-mint: #E7F3EC;
+  --pastel-blue: #E8EEF9;
+  --pastel-orange: #FDF1E6;
+  --pastel-purple: #F3EAF8;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--color-text);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Typography styles */
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-serif-italic {
+  font-family: 'Instrument Serif', 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+  border-left: 1px solid rgba(18, 43, 30, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(18, 43, 30, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(18, 43, 30, 0.4);
+}
+
+/* Alldae Card & Button Utilities */
+.alldae-card {
+  border-radius: 28px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.alldae-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px -10px rgba(18, 43, 30, 0.08);
+}
+
+.pill-btn {
+  border-radius: 9999px;
+  padding: 12px 26px;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.pill-btn-lime {
+  background: var(--color-accent-lime);
+  color: var(--color-primary);
+  border: none;
+  box-shadow: 0 4px 14px rgba(214, 240, 69, 0.35);
+}
+
+.pill-btn-lime:hover {
+  background: #e2fb56;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(214, 240, 69, 0.45);
+}
+
+.pill-btn-dark {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+}
+
+.pill-btn-dark:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(18, 43, 30, 0.25);
+}
+
+.pill-btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid rgba(18, 43, 30, 0.2);
+}
+
+.pill-btn-outline:hover {
+  background: rgba(18, 43, 30, 0.04);
+  border-color: var(--color-primary);
+}
+
+/* Neomorphism Utilities - Backward Compatibility */
+.neomorph-flat {
+  background: #FFFFFF;
+  box-shadow: 0 10px 30px -5px rgba(18, 43, 30, 0.04), 0 2px 6px rgba(18, 43, 30, 0.02);
+  border: 1px solid rgba(18, 43, 30, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neomorph-flat-hover:hover {
+  box-shadow: 0 20px 40px -10px rgba(18, 43, 30, 0.08);
+  transform: translateY(-4px);
+}
+
+.neomorph-pressed {
+  background: #FAF8F5;
+  box-shadow: inset 2px 2px 6px rgba(18, 43, 30, 0.04);
+  border: 1px solid rgba(18, 43, 30, 0.05);
+}
+
+.neomorph-btn {
+  background: #FFFFFF;
+  color: var(--color-primary);
+  border: 1px solid rgba(18, 43, 30, 0.1);
+  box-shadow: 0 4px 12px rgba(18, 43, 30, 0.04);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.neomorph-btn:hover {
+  background: var(--color-bg-alt);
+  transform: translateY(-1px);
+}
+
+.neomorph-btn-primary {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(18, 43, 30, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.neomorph-btn-primary:hover {
+  background: var(--color-primary-light);
+  box-shadow: 0 6px 20px rgba(18, 43, 30, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Glassmorphism Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 36px 0 rgba(18, 43, 30, 0.04);
+}
+
+.glass-navbar {
+  background: rgba(250, 248, 245, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(18, 43, 30, 0.06);
+}
+
+/* Scroll Animations CSS */
+.reveal {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-fade.active {
+  opacity: 1;
+}
+
+.reveal-up {
+  transform: translateY(30px);
+}
+
+.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-down {
+  transform: translateY(-30px);
+}
+
+.reveal-down.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  transform: translateX(30px);
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  transform: translateX(-30px);
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Special Micro-Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes sway {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-sway {
+  animation: sway 6s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 4s ease-in-out infinite;
+}
+
+/* Storyline Animation Utilities */
+@keyframes storyFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes progressPulse {
+  0% { box-shadow: 0 0 0 0 rgba(214, 240, 69, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(214, 240, 69, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(214, 240, 69, 0); }
+}
+
+.story-fade-in {
+  animation: storyFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.story-pulse-ring {
+  animation: progressPulse 2s infinite;
+}
+
